@@ -13,6 +13,9 @@ export default class ChromeBoisDomain extends Component {
      */
   }
 
+  handleClick = (event) => {
+    toggleCycling()
+  }
   /* TODO: Create an event handler which, when fired, invokes the provided
    * `toggleCycling` function with no arguments. Don't forget the click event
    * listener that should fire it!
@@ -37,7 +40,7 @@ export default class ChromeBoisDomain extends Component {
      return (
        <canvas
          onMouseMove={this.handleMouseMove}
-         onClick={() => {toggleCycling()}}
+         onClick={this.handleClick}
          onKeyDown={this.handleKeyDown}
          width='900'
          height='600'
